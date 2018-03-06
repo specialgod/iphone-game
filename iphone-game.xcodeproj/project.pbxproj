@@ -17,6 +17,10 @@
 		49AAD57F204E853E0000EEB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AAD57D204E853E0000EEB5 /* LaunchScreen.storyboard */; };
 		49AAD58A204E853E0000EEB5 /* iphone_gameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AAD589204E853E0000EEB5 /* iphone_gameTests.swift */; };
 		49AAD595204E853E0000EEB5 /* iphone_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AAD594204E853E0000EEB5 /* iphone_gameUITests.swift */; };
+		7083CA9B204E899F00215883 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7083CA97204E899F00215883 /* LFCGzipUtility.m */; };
+		7083CA9C204E899F00215883 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 7083CA99204E899F00215883 /* JSTileMap.m */; };
+		7083CAA0204E8A4B00215883 /* map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 7083CA9E204E8A4A00215883 /* map.tmx */; };
+		7083CAA1204E8A4B00215883 /* tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 7083CA9F204E8A4B00215883 /* tiles.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,13 @@
 		49AAD590204E853E0000EEB5 /* iphone-gameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iphone-gameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AAD594204E853E0000EEB5 /* iphone_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iphone_gameUITests.swift; sourceTree = "<group>"; };
 		49AAD596204E853E0000EEB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7083CA97204E899F00215883 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+		7083CA98204E899F00215883 /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
+		7083CA99204E899F00215883 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
+		7083CA9A204E899F00215883 /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
+		7083CA9D204E89AF00215883 /* iphone-game-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iphone-game-Bridging-Header.h"; sourceTree = "<group>"; };
+		7083CA9E204E8A4A00215883 /* map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map.tmx; sourceTree = "<group>"; };
+		7083CA9F204E8A4B00215883 /* tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiles.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +114,10 @@
 		49AAD56D204E853D0000EEB5 /* iphone-game */ = {
 			isa = PBXGroup;
 			children = (
+				7083CA9A204E899F00215883 /* LFCGzipUtility.h */,
+				7083CA97204E899F00215883 /* LFCGzipUtility.m */,
+				7083CA98204E899F00215883 /* JSTileMap.h */,
+				7083CA99204E899F00215883 /* JSTileMap.m */,
 				49AAD56E204E853D0000EEB5 /* AppDelegate.swift */,
 				49AAD570204E853D0000EEB5 /* GameScene.sks */,
 				49AAD572204E853E0000EEB5 /* Actions.sks */,
@@ -112,6 +127,9 @@
 				49AAD57B204E853E0000EEB5 /* Assets.xcassets */,
 				49AAD57D204E853E0000EEB5 /* LaunchScreen.storyboard */,
 				49AAD580204E853E0000EEB5 /* Info.plist */,
+				7083CA9D204E89AF00215883 /* iphone-game-Bridging-Header.h */,
+				7083CA9E204E8A4A00215883 /* map.tmx */,
+				7083CA9F204E8A4B00215883 /* tiles.png */,
 			);
 			path = "iphone-game";
 			sourceTree = "<group>";
@@ -241,9 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7083CAA0204E8A4B00215883 /* map.tmx in Resources */,
 				49AAD57A204E853E0000EEB5 /* Main.storyboard in Resources */,
 				49AAD571204E853D0000EEB5 /* GameScene.sks in Resources */,
 				49AAD57C204E853E0000EEB5 /* Assets.xcassets in Resources */,
+				7083CAA1204E8A4B00215883 /* tiles.png in Resources */,
 				49AAD57F204E853E0000EEB5 /* LaunchScreen.storyboard in Resources */,
 				49AAD573204E853E0000EEB5 /* Actions.sks in Resources */,
 			);
@@ -271,7 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				49AAD575204E853E0000EEB5 /* GameScene.swift in Sources */,
+				7083CA9C204E899F00215883 /* JSTileMap.m in Sources */,
 				49AAD577204E853E0000EEB5 /* GameViewController.swift in Sources */,
+				7083CA9B204E899F00215883 /* LFCGzipUtility.m in Sources */,
 				49AAD56F204E853D0000EEB5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mesuki.iphone-game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iphone-game/iphone-game-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,6 +480,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mesuki.iphone-game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iphone-game/iphone-game-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
