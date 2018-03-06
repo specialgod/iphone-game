@@ -19,7 +19,8 @@ class GameScene: SKScene {
     private var x:CGFloat = 0
     private var y:CGFloat = 0
     
-    private var player:SKSpriteNode?
+    private var player: SKSpriteNode?
+    private var playerTextures = [SKTexture]()
     
     override func didMove(to view: SKView) {
         self.anchorPoint = CGPoint(x: 0, y: 0)
@@ -31,6 +32,20 @@ class GameScene: SKScene {
             self.addChild(map)
             self.backgroundColor = SKColor(displayP3Red: 0.4, green: 0.7, blue: 0.95, alpha: 1.0)
         }
+        
+        let playerAtlas = SKTextureAtlas(named: "player")
+        playerTextures.append(playerAtlas.textureNamed("player1"))
+        playerTextures.append(playerAtlas.textureNamed("player2"))
+        
+        let player = SKSpriteNode(texture: playerTextures[0])
+        self.addChild(player)
+        player.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        player.zPosition = 100
+        
+        // アニメーション
+        let animation = SKAction.animate(with: playerTextures, timePerFrame: 0.2)
+        player.run(SKAction.repeatForever(animation))
+        self.player = player
         
 //        let player = SKSpriteNode(imageNamed: "player")
 //        self.addChild(player)
